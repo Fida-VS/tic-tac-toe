@@ -1,8 +1,7 @@
-import styles from '../App.module.css';
+
 import { useState } from 'react';
-import { FieldItem } from './FieldItem';
-import { AppHeader } from './AppHeader';
 import { CalculateWinner } from '../utils/calculateWinner'
+import { FieldLayout } from './FieldLayout';
 
 export const Field = () => {
 
@@ -33,23 +32,18 @@ export const Field = () => {
   }
 
 
-return(
+  const restartClick = () => {
+	setXIsNext(true);
+	setfieldItems(Array(9).fill(null));
+  }
 
-	<div className={styles.field}>
-	<AppHeader status={status}/>
-	<div className={styles.container}>
-     <FieldItem onFieldItemClick={() => handleClick(0)} value={fieldItems[0]} />
-	 <FieldItem onFieldItemClick={() => handleClick(1)} value={fieldItems[1]} />
-	 <FieldItem onFieldItemClick={() => handleClick(2)} value={fieldItems[2]} />
-	 <FieldItem onFieldItemClick={() => handleClick(3)} value={fieldItems[3]} />
-	 <FieldItem onFieldItemClick={() => handleClick(4)} value={fieldItems[4]} />
-	 <FieldItem onFieldItemClick={() => handleClick(5)} value={fieldItems[5]} />
-	 <FieldItem onFieldItemClick={() => handleClick(6)} value={fieldItems[6]} />
-	 <FieldItem onFieldItemClick={() => handleClick(7)} value={fieldItems[7]} />
-	 <FieldItem onFieldItemClick={() => handleClick(8)} value={fieldItems[8]} />
-	 </div>
-	</div>
 
-)
+return <FieldLayout xIsNext={xIsNext}
+fieldItems={fieldItems}
+setXIsNext={setXIsNext}
+setfieldItems={setfieldItems}
+handleClick={handleClick}
+status={status}
+restartClick={restartClick}/>
 
 }
