@@ -1,18 +1,13 @@
 import styles from '../App.module.css';
 
-export const AppHeader = () => {
+export const AppHeader = ({status}) => {
 
 return(
 
 	<div className={styles.header}>
-		<div className={styles.headerCross}>
-			<div>X</div>
-		</div>
-		<div className={styles.headerZero}>
-		<div>0</div>
-		</div>
+		<div className="status">{status}</div>
 	</div>
 
-)
+   )
 
 }

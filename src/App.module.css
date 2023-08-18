@@ -27,6 +27,11 @@ flex-direction: column;
 .field{
 	background-color: #9e9c9c;
 	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	display: flex;
 	flex-wrap: wrap;
 }
 

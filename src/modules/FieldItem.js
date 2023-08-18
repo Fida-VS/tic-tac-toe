@@ -1,10 +1,11 @@
 import styles from '../App.module.css';
 
-export const FieldItem = () => {
+
+export const FieldItem = ({value, onFieldItemClick}) => {
 
 	return(
 
-		<div className={styles.fieldItem}></div>
+		<div onClick={onFieldItemClick} className={styles.fieldItem}>{value}</div>
 
 	)
 
