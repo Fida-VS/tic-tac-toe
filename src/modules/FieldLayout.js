@@ -2,6 +2,7 @@ import styles from '../App.module.css';
 import { AppHeader } from './AppHeader';
 import { FieldItem } from './FieldItem';
 import { ButtonNewGame } from './ButtonNewGame';
+import PropTypes from 'prop-types';
 
 export const FieldLayout = ({xIsNext, fieldItems, setXIsNext, setfieldItems, handleClick, status, restartClick}) => {
 
@@ -23,4 +24,15 @@ export const FieldLayout = ({xIsNext, fieldItems, setXIsNext, setfieldItems, han
 		</div>
 	)
 
+	};
+
+
+	FieldLayout.propTypes = {
+		xIsNext: PropTypes.bool,
+		fieldItems: PropTypes.array,
+		setXIsNext: PropTypes.func,
+		setfieldItems: PropTypes.func,
+		handleClick: PropTypes.func,
+		status: PropTypes.string,
+		restartClick: PropTypes.func
 	}

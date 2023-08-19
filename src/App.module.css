@@ -54,3 +54,11 @@ flex-direction: column;
 	font-weight: bold;
 	cursor: pointer;
 }
+
+.green{
+	color: green;
+}
+
+.status{
+	color: black;
+}

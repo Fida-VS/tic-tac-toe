@@ -1,4 +1,5 @@
 import styles from '../App.module.css';
+import PropTypes from 'prop-types';
 
 
 export const FieldItem = ({value, onFieldItemClick}) => {
@@ -9,4 +10,10 @@ export const FieldItem = ({value, onFieldItemClick}) => {
 
 	)
 
+	};
+
+
+	FieldItem.propTypes = {
+		value: PropTypes.string,
+		onFieldItemClick: PropTypes.func,
 	}

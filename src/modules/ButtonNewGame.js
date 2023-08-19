@@ -1,4 +1,5 @@
 import styles from '../App.module.css';
+import PropTypes from 'prop-types';
 
 export const ButtonNewGame = ({onButtonNewGameClick}) => {
 
@@ -8,4 +9,8 @@ export const ButtonNewGame = ({onButtonNewGameClick}) => {
 
 	)
 
+	};
+
+	ButtonNewGame.propTypes = {
+		onButtonNewGameClick: PropTypes.func,
 	}
