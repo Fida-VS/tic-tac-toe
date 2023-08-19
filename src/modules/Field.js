@@ -27,7 +27,9 @@ export const Field = () => {
   let status;
   if (winner) {
     status = "Winner: " + winner;
-  } else {
+  } else if (!winner&&!(fieldItems.includes(null))){
+	status = "Winner: Nobody";
+  } else if (!winner&&fieldItems.includes(null)){
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
